@@ -1,0 +1,12 @@
+{
+  "name": "Coffee Pour-Over Calculator",
+  "short_name": "C-C-C-Coffee",
+  "description": "Need... Coffee",
+  "start_url": "/c-c-c-coffee/",
+  "display": "standalone",
+  "background_color": "#FFF8F0",
+  "theme_color": "#6F4E37",
+  "orientation": "portrait",
+  "scope": "/c-c-c-coffee/",
+  "icons": []
+}

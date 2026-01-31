@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#6F4E37">
+  <meta name="description" content="C-c-c-coffee">
+  
+  <title>Need...Coffee?</title>
+  
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="manifest.json">
+  
+  <!-- iOS specific (will use default icon for now) -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Coffee">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- View 1: Recipe -->
+  <div id="recipe-view" class="view active">
+    
+    <h2 id="recipe-name">Recipe</h2>
+    <p>How much... Coffee?</p>
+    
+    <div class="settings">
+      <label>
+        Coffee Amount: <span id="coffee-amount-display">20g</span>
+        <input type="range" id="coffee-slider" min="10" max="40" value="20">
+      </label>
+      
+      <label>
+        <input type="checkbox" id="iced-toggle">
+        Iced Coffee
+      </label>
+    </div>
+    
+    <div id="recipe-details">
+      <p>Coffee: <strong id="coffee-display">20g</strong></p>
+      <p>Water: <strong id="water-display">320g</strong></p>
+      <p>Ice: <strong id="ice-display">0g</strong></p>
+    </div>
+    
+    <button id="start-brew-btn" class="primary-button">Start Brewing →</button>
+  </div>
+
+  <!-- View 2: Brew -->
+  <div id="brew-view" class="view hidden">
+    <button class="back-button" id="brew-back-btn">← Back</button>
+    
+    <h2>Make...Coffee?</h2>
+    
+    <div id="brew-stats">
+      <p>Total Coffee: <strong id="brew-coffee">20g</strong></p>
+      <p>Total Water: <strong id="brew-water">320g</strong></p>
+      <p>Total Ice: <strong id="brew-ice">0g</strong></p>
+    </div>
+    
+    <div id="timer-display">
+      <h1 id="timer-text">00:00</h1>
+    </div>
+    
+    <div id="pour-instruction">
+      <p>Press Start to begin brewing</p>
+    </div>
+    
+    <div class="brew-controls">
+      <button id="start-pause-btn">Start</button>
+      <button id="stop-btn">Stop</button>
+    </div>
+  </div>
+
+  <!-- Load JavaScript -->
+  <script src="app.js"></script>
+</body>
+</html>
